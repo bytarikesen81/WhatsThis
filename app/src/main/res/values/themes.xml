@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.WhatsThis.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.WhatsThis.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

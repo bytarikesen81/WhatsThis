@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_permissions">
+
+    <fragment
+        android:id="@+id/nav_permissions"
+        android:name="com.teapps.whatsthis.view.fragments.camera.CameraPermissionsFragment"
+        android:label="Permissions" >
+        <action
+            android:id="@+id/action_nav_permissions_to_nav_camera"
+            app:destination="@id/nav_camera" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="com.teapps.whatsthis.view.fragments.camera.CameraFragment"
+        android:label="@string/menu_camera"
+        tools:layout="@layout/fragment_camera">
+        <action
+            android:id="@+id/action_nav_camera_to_nav_permissions"
+            app:destination="@id/nav_permissions" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_picture"
+        android:name="com.teapps.whatsthis.view.fragments.picture.PictureFragment"
+        android:label="@string/menu_picture"
+        tools:layout="@layout/fragment_picture" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.teapps.whatsthis.view.fragments.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
